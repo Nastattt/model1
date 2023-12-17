@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>news</title>
+</head>
+<body>
+<form action="" method="post">
+    {% csrf_token %}
+    <p><label for="{{ form.title.id_for_label }}">Название</label>{{ form.title }}</p>
+    <p><label for="{{ form.content.id_for_label }}">Описание</label>{{ form.content }}</p>
+    <p><label for="{{ form.is_published.id_for_label }}">Публикация</label>{{ form.is_published }}</p>
+    <p><label for="{{ form.category.id_for_label }}">Категории</label>{{ form.category }}</p>
+    <button type="submit">Send</button> {# Added type="submit" to the button element #}
+</form>
+</body>
+</html>
